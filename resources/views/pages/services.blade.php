@@ -8,7 +8,7 @@
 
     </head>
     <body>
-            <h1>Bienvenue dans le blog</h1>
-            <p>c'est un test</p>
+            <h1>Voici la pages services</h1>
+            <p>c'est la pages service </p>
     </body>
 </html>
