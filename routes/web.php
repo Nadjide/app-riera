@@ -20,11 +20,3 @@ Route::get('/services', 'App\Http\Controllers\PagesController@services');
 Route::get('/users/{id}', function ($id) {
     return 'This is a user ' . $id;
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
