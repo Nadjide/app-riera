@@ -12,7 +12,7 @@
 
 <div class="form-group">
     {{ Form::label('image', 'Image') }}
-    {{Form::file('image',  ['class' => 'form-control','placeholder'=>'Title'])}}
+    {{Form::file('image', ['class' => 'form-control','placeholder'=>'Title'])}}
 </div>
 
 <div class="form-group">

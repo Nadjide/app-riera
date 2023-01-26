@@ -39,6 +39,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/">Page d'accueil</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/posts/create">Ajout post</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contact">Contact</a>
                         </li>
@@ -85,6 +89,7 @@
         </nav>
 
         <main class="py-4 container">
+            @include('inc.messages')
             @yield('content')
         </main>
     </div>
