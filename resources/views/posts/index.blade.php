@@ -2,7 +2,7 @@
 
 @section('content')
        <h1>Posts</h1>
-       @if (count($posts) > 1)
+       @if (count($posts) >= 1)
         <div class="card">
         <ul class="list-group list group-flush">
         @foreach ($posts as $post)

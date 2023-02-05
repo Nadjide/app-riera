@@ -7,6 +7,16 @@ use App\Models\Post;
 
 class PostsController extends Controller
 {
+            /**
+         * Create a new controller instance.
+         *
+         * @return void
+         */
+        public function __construct()
+        {
+            $this->middleware('auth' , ['except' => ['index', 'show']]);
+        }
+
     /**
      * Display a listing of the resource.
      *
@@ -45,6 +55,8 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->image = $request->input('image');
         $post->body = $request->input('body');
+        $post->user_id = auth()->user()->id;
+        $post->created_at = now();
         $post->save();
 
         return redirect('/posts')->with('success', 'post created successfully');
@@ -72,6 +84,11 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+        if(auth()->user()->id !== $post->user_id){
+            return redirect('/posts')->with('error', 'page non autorisée.');
+        }
+
+
         return view('posts.edit')->with('post', $post);
     }
 
@@ -93,6 +110,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->image = $request->input('image');
         $post->body = $request->input('body');
+        $post->updated_at = now();
         $post->save();
 
         return redirect('/posts')->with('success', 'post updated successfully');

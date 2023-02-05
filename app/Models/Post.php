@@ -12,4 +12,8 @@ class Post extends Model
     public $primaryKey = 'id';
     //horodatages
     public $timestamps = false;
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

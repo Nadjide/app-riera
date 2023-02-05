@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-inverse shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -87,9 +87,9 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4 container">
+        <div class="container">
             @include('inc.messages')
+        <main class="py-4">
             @yield('content')
         </main>
     </div>
