@@ -39,6 +39,7 @@ class PostsController extends Controller
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
+            'image'=>'required',
         ]);
         $post= new Post;
         $post->title = $request->input('title');
@@ -86,10 +87,11 @@ class PostsController extends Controller
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
+            'image'=>'required',
         ]);
         $post= Post::find($id);
         $post->title = $request->input('title');
-        // $post->image = $request->input('image');
+        $post->image = $request->input('image');
         $post->body = $request->input('body');
         $post->save();
 

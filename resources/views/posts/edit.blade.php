@@ -10,10 +10,10 @@
     {{Form::text('title', $post->title, ['class' => 'form-control','placeholder'=>'Title'])}}
 </div>
 
-{{-- <div class="form-group">
+<div class="form-group">
     {{ Form::label('image', 'Image') }}
-    {{Form::file('image', ['class' => 'form-control','placeholder'=>'Title'])}}
-</div> --}}
+    {{Form::file('image', ['class' => 'form-control','placeholder'=>'Image'])}}
+</div>
 
 <div class="form-group">
     {{ Form::label('body', 'body') }}
