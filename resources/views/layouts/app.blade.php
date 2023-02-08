@@ -44,7 +44,7 @@
                             <a class="nav-link" href="/posts/create">Ajout post</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contact">Contact</a>
+                            <a class="nav-link" href="/contactForm">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/about">A propos</a>

@@ -1,21 +1,30 @@
 @extends('layouts.app')
-
 @section('content')
-    <h1>Page d'accueil</h1>
+    <h1>Page d'arcticle</h1>
+    <hr>
+    <div id="news-container"></div>
        <script>
         const API_KEY = 'bfbc1feae891427e9afc9f8bc24769ff';
         const API_URL = 'https://newsapi.org/v2';
 
-        fetch(`${API_URL}/top-headlines?country=fr&apiKey=${API_KEY}`)
+        fetch(`${API_URL}/top-headlines?country=fr&category=technology&apiKey=${API_KEY}`)
             .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.log(error));
+            .then(data =>{const newsContainer = document.getElementById("news-container");
+            let newsHTML = "";
 
-        fetch(`${API_URL}/everything?q=bitcoin&apiKey=${API_KEY}`)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.log(error));
+    data.articles.forEach(article => {
+      newsHTML += `
+        <div class="news-article">
+          <h2>${article.title}</h2>
+          <p>${article.description}</p>
+          <a href="${article.url}" target="_blank">Lire l'article complet</a>
+        </div>
+      `;
+    });
 
+    newsContainer.innerHTML = newsHTML;
+})
+  .catch(error => console.error(error));
         </script>
 @endsection()
 
