@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
-    <h1>Page d'arcticle</h1>
+
+
+    <h1 class="fw-bold text-center">Page d'arcticle</h1>
     <hr>
     <div id="news-container"></div>
        <script>
@@ -13,12 +15,15 @@
             let newsHTML = "";
 
     data.articles.forEach(article => {
-      newsHTML += `
-        <div class="news-article">
-          <h2>${article.title}</h2>
-          <p>${article.description}</p>
-          <a href="${article.url}" target="_blank">Lire l'article complet</a>
+      newsHTML +=`
+    <hr>
+        <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="col text-uppercase fw-bold">${article.title}</div>
+          <p class="col">${article.description}</p>
+          <a class="col" href="${article.url}" target="_blank">Lire l'article complet</a>
         </div>
+    </div>
       `;
     });
 

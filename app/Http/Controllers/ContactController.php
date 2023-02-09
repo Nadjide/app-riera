@@ -22,13 +22,8 @@ class ContactController extends Controller
     public function index()
 
     {
-
         return view('contactForm');
-
     }
-
-
-
     /**
 
      * Write code on Method
@@ -46,27 +41,14 @@ class ContactController extends Controller
         $request->validate([
 
             'name' => 'required',
-
             'email' => 'required|email',
-
             'phone' => 'required|digits:10|numeric',
-
             'subject' => 'required',
-
             'message' => 'required'
-
         ]);
-
-
-
         Contact::create($request->all());
-
-
-
         return redirect()->back()
-
                          ->with(['success' => 'Thank you for contact us. we will contact you shortly.']);
-
     }
 
 }
