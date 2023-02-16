@@ -3,6 +3,10 @@
 
 
     <h1 class="fw-bold text-center">Page d'arcticle</h1>
+    <div>
+        <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptatibus vel a, excepturi rerum sint?</p>
+    </div>
+
     <hr>
     <div id="news-container"></div>
        <script>

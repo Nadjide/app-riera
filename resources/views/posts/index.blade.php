@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-       <h1>Posts</h1>
+       <h1 class="text-center">Posts</h1>
        @if (count($posts) >= 1)
         <div class="card">
         <ul class="list-group list group-flush">
