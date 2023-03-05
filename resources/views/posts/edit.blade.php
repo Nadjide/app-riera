@@ -11,11 +11,6 @@
 </div>
 
 <div class="form-group">
-    {{ Form::label('image', 'Image') }}
-    {{Form::file('image', ['class' => 'form-control','placeholder'=>'Image'])}}
-</div>
-
-<div class="form-group">
     {{ Form::label('body', 'body') }}
     {{Form::text('body', $post->body, ['class' => 'form-control','placeholder'=>'Body'])}}
 </div>

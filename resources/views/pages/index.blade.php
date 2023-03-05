@@ -2,10 +2,25 @@
 @section('content')
 
 
-    <h1 class="fw-bold text-center">Page d'arcticle</h1>
-    <div>
-        <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptatibus vel a, excepturi rerum sint?</p>
-    </div>
+    <h1 class="fw-bold text-center">Page d'accueil</h1>
+    <hr>
+    <section>
+        <div>
+            @auth
+            <h2 class="text-center fw-bold">Bonjour {{ Auth::user()->name }} bienvenue sur le site {{config('app.name', 'Laravel') }}</h2>
+            @endauth
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            @guest
+            <a href="/login" class="btn btn-dark" role="button" aria-disabled="true">LOGIN</a>
+            <a href="/register" class="btn btn-dark" role="button" aria-disabled="true">REGISTER</a>
+            @else
+            <a href="/home" class="btn btn-dark" role="button" aria-disabled="true">DASHBOARD</a>
+            <a href="/posts/create" class="btn btn-dark" role="button" aria-disabled="true">CREATE POST</a>
+            <a href="/posts" class="btn btn-dark" role="button" aria-disabled="true">BLOG</a>
+            @endguest
+          </div>
+    </section>
 
     <hr>
     <div id="news-container"></div>

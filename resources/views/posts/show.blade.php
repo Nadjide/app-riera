@@ -5,8 +5,8 @@
 <a href="/posts" class="btn btn-default">Aller en arrière</a>
        <h1>{{$post->title}}</h1>
        <p>{{$post->body}}</p>
-         <hr>
-            <small>Ecrit en {{$post->created_at}}</small>
+        <img style="width:50%" src="/storage/images/{{$post->image}}">
+            <small>Ecrit par {{$post->user->name}} le {{$post->created_at}}</small>
             <hr>
             @if(!Auth::guest())
             @if(Auth::user()->id == $post->user_id)

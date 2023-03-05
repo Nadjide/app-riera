@@ -49,11 +49,29 @@ class PostsController extends Controller
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
-            'image'=>'required',
+            'image'=>'image|nullable|max:1999',
         ]);
+
+        // test file
+        if($request->hasFile('image')){
+            // Get filename with the extension
+            $filenameWithExt = $request->file('image')->getClientOriginalName();
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('image')->getClientOriginalExtension();
+            // Filename to store
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('image')->storeAs('public/images', $fileNameToStore);
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+        }
+
         $post= new Post;
         $post->title = $request->input('title');
-        $post->image = $request->input('image');
+        $post->name = auth()->user()->name;
+        $post->image = $fileNameToStore;
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
         $post->created_at = now();

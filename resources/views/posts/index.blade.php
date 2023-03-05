@@ -9,7 +9,7 @@
 
                     <li class="list-group-item">
                         <h3><a href="/posts/{{$post->id}}"> {{$post->title}}</a></h3>
-                        <small>Ecrit le {{$post-> created_at}}</small>
+                        <small>Ecrit par {{$post->user->name}} le {{$post-> created_at}}</small>
                     </li>
 
         @endforeach
