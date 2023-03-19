@@ -12,12 +12,12 @@
         </div>
         <div class="d-grid gap-2 col-6 mx-auto">
             @guest
-            <a href="/login" class="btn btn-dark" role="button" aria-disabled="true">LOGIN</a>
-            <a href="/register" class="btn btn-dark" role="button" aria-disabled="true">REGISTER</a>
+            <a href="/login" class="btn btn-dark btn-sm ms-auto" role="button" aria-disabled="true">LOGIN</a>
+            <a href="/register" class="btn btn-dark btn-sm ms-auto" role="button" aria-disabled="true">REGISTER</a>
             @else
-            <a href="/home" class="btn btn-dark" role="button" aria-disabled="true">DASHBOARD</a>
-            <a href="/posts/create" class="btn btn-dark" role="button" aria-disabled="true">CREATE POST</a>
-            <a href="/posts" class="btn btn-dark" role="button" aria-disabled="true">BLOG</a>
+            <a href="/home" class="btn btn-dark btn-sm ms-auto" role="button" aria-disabled="true">DASHBOARD</a>
+            <a href="/posts/create" class="btn btn-dark btn-sm ms-auto" role="button" aria-disabled="true">CREATE POST</a>
+            <a href="/posts" class="btn btn-dark btn-sm ms-auto" role="button" aria-disabled="true">BLOG</a>
             @endguest
           </div>
     </section>
@@ -39,8 +39,7 @@
         <div class="container text-center">
         <div class="row align-items-start">
           <div class="col text-uppercase fw-bold">${article.title}</div>
-          <p class="col">${article.description}</p>
-          <a class="col" href="${article.url}" target="_blank">Lire l'article complet</a>
+          <a class="col-auto btn btn-sm btn-dark ms-auto" href="${article.url}" target="_blank">Lire l'article complet</a>
         </div>
     </div>
       `;

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CommentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ Route::get('/about', 'App\Http\Controllers\PagesController@about');
 Route::get('/contactForm', 'App\Http\Controllers\PagesController@contact');
 Route::get('contact-us', [ContactController::class, 'index']);
 Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+Route::post('comment', [CommentsController::class, 'store'])->name('comment.store');
 
 
 
