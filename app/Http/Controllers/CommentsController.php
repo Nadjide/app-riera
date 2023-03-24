@@ -44,6 +44,7 @@ class CommentsController extends Controller
         $comment->body = $request->input('body');
         $comment->user_id = auth()->user()->id;
         $comment->post_id = $request->input('post_id');
+        $comment->created_at = now();
         $comment->save();
 
         return redirect('/posts/' . $comment->post_id)->with('success', 'Commentaire ajouté');
@@ -91,6 +92,6 @@ class CommentsController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }

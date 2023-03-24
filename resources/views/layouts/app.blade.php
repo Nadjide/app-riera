@@ -22,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-inverse shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -32,13 +32,8 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <!-- Authentication Links -->
                         <li class="nav-item">
                             <a class="nav-link" href="/">Page d'accueil</a>
@@ -99,14 +94,14 @@
     </div>
     <section>
         <footer class="py-3 my-4">
- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-     <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
-     <li class="nav-item"><a href="/posts" class="nav-link px-2 text-muted">Blog</a></li>
-     <li class="nav-item"><a href="/contactForm" class="nav-link px-2 text-muted">Contact</a></li>
-     <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">A Propos</a></li>
-   </ul>
-   <p class="text-center text-muted">© 2023 AppRiera, Inc</p>
- </footer>
-     </section>
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="/posts" class="nav-link px-2 text-muted">Blog</a></li>
+                <li class="nav-item"><a href="/contactForm" class="nav-link px-2 text-muted">Contact</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">A Propos</a></li>
+            </ul>
+            <p class="text-center text-muted">© 2023 AppRiera, Inc</p>
+            </footer>
+        </section>
 </body>
 </html>

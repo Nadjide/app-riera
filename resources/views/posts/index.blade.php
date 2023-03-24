@@ -1,22 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-       <h1 class="text-center">Posts</h1>
-       @if (count($posts) >= 1)
-        <div class="card">
-        <ul class="list-group list group-flush">
+<div class="container">
+    <h1 class="text-center my-4">Posts</h1>
+    @if (count($posts) >= 1)
+    <div class="row">
         @foreach ($posts as $post)
-
-                    <li class="list-group-item">
-                        <h3><a href="/posts/{{$post->id}}"> {{$post->title}}</a></h3>
-                        <small>Ecrit par {{$post->user->name}} le {{$post-> created_at}}</small>
-                    </li>
-
+        <div class="col-md-4 my-2">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title"><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
+                    <small class="text-muted">Ecrit par {{$post->user->name}} le {{$post->created_at}}</small>
+                </div>
+            </div>
+        </div>
         @endforeach
-    </ul>
     </div>
-
-       @else
-
-       @endif
-@endsection()
+    @else
+    <div class="alert alert-info">
+        <p>Aucun post trouvé.</p>
+    </div>
+    @endif
+</div>
+@endsection
