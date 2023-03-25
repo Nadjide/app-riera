@@ -19,7 +19,7 @@
         <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
         {!! Form::open(['action' => ['App\Http\Controllers\PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'd-inline']) !!}
             {{ Form::hidden('_method', 'DELETE') }}
-            {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+            {{ Form::button('Delete', ['class' => 'btn btn-danger', 'onclick' => "return confirm('Êtes-vous sur de vouloir supprimer ce post?')", 'type' => 'submit']) }}
         {!! Form::close() !!}
         @endif
     @endif

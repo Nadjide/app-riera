@@ -9,8 +9,11 @@
         <div class="col-md-4 my-2">
             <div class="card">
                 <div class="card-body">
-                    <h3 class="card-title"><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
+                    <h3 class="card-title">{{$post->title}}</h3>
                     <small class="text-muted">Ecrit par {{$post->user->name}} le {{$post->created_at}}</small>
+                    <p class="card-text">{{Str::limit($post->body, 100)}}</p>
+                    <a href="/posts/{{$post->id}}" class="btn btn-dark">Voir plus</a>
+                    <small class="text-muted float-right">{{$post->comments->count()}} commentaires</small>
                 </div>
             </div>
         </div>
