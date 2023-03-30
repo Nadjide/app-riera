@@ -2,12 +2,12 @@
 @section('content')
 
 <div class="container">
-    <h1 class="fw-bold text-center">Page d'accueil</h1>
+    <h1 class="text-center">Page d'accueil</h1>
     <hr>
     <section>
         <div>
             @auth
-            <h2 class="text-center fw-bold">Bonjour {{ Auth::user()->name }} bienvenue sur le site {{config('app.name', 'Laravel') }}</h2>
+            <h2 class="text-center">Bonjour {{ Auth::user()->name }} bienvenue sur le site {{config('app.name', 'Laravel') }}</h2>
             @endauth
         </div>
         <div class="d-flex justify-content-center my-4">
@@ -40,7 +40,7 @@
                     <hr>
                     <div class="container text-center">
                         <div class="row align-items-start">
-                            <div class="col text-uppercase fw-bold">${article.title}</div>
+                            <div class="col text-uppercase">${article.title}</div>
                             <a class="col-auto btn btn-sm btn-dark ms-auto" href="${article.url}" target="_blank">Lire l'article complet</a>
                         </div>
                     </div>
