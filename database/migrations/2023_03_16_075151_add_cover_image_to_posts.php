@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('cover_images');
-            $table->mediumText('body');
-            $table->timestamps();
+        Schema::table('posts', function (Blueprint $table) {
+            $table->string('cover_image');
+            //
         });
     }
 
@@ -29,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('cover_image');
+            //
+        });
     }
 };
