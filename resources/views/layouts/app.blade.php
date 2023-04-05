@@ -16,7 +16,7 @@
 
     <!-- Bootstrap 5 JavaScript Bundle with Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" type="application/javascript"></script>
 
 
 </head>
@@ -32,9 +32,9 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Right Side Of Navbar -->
+
                     <ul class="navbar-nav">
-                        <!-- Authentication Links -->
+
                         <li class="nav-item">
                             <a class="nav-link" href="/">Page d'accueil</a>
                         </li>
@@ -80,6 +80,7 @@
                                 });
                             </script>
                             @endguest
+
                         </div>
                     </ul>
                 </div>
