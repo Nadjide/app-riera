@@ -11,13 +11,13 @@
         <input id="querycitycountry" type="text">
         <button id="mybutton"> ❄ </button>
         <div id="weatherData"></div>
+        <script src="{{ asset('js/meteo.js') }}"></script>
     </div>
-    @vite('public/js/meteo.js')
     <div>
         <img class="image-bas-page" src = "https://www.campus-riera.com/img/BACHELOR.png" position= down; width="300" height="200">
         <img class="image-bas-page" src = "https://www.campus-riera.com/img/BTS.png" width="300" height="200">
         <img class="image-bas-page" src = "https://www.campus-riera.com/img/MASTERE.png" width="300" height="200">
-        <img class="image-bas-page" src = "https://www.apprentissage-sud.fr/wp-content/uploads/2022/02/Locaux-Campus-Riera.jpg" width="300" height="200">
+
     </div>
     </div>
 @endsection
