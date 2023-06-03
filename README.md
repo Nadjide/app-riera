@@ -7,3 +7,14 @@ L'un des aspects les plus intéressants d'Actu Riera est la possibilité d'écha
 L'application web propose également des forums dédiés à la vie étudiante, qui permettent aux utilisateurs de discuter de sujets plus larges tels que les loisirs, les activités culturelles ou sportives, les clubs étudiants et les associations. Ces forums sont un excellent moyen pour les étudiants de rencontrer d'autres personnes partageant les mêmes centres d'intérêt, de tisser des liens et de se sentir intégrés au sein de l'établissement.
 
 En résumé, Actu Riera est une plateforme en ligne conviviale et interactive qui offre aux étudiants une multitude de possibilités pour communiquer, échanger et s'entraider au sein de leur campus. C'est un outil précieux pour faciliter l'intégration et améliorer la qualité de vie étudiante.
+
+
+Installation
+
+Pour exécuter Actu Riera en local, veuillez suivre ces étapes :
+
+    Cloner le dépôt : git clone https://github.com/votre-nom-utilisateur/app-riera.git
+
+    Installer les dépendances requises :
+cd actu-riera
+npm install
