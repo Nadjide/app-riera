@@ -122,11 +122,9 @@ class PostsController extends Controller
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
-            'image'=>'required',
         ]);
         $post= Post::find($id);
         $post->title = $request->input('title');
-        $post->image = $request->input('image');
         $post->body = $request->input('body');
         $post->updated_at = now();
         $post->save();
