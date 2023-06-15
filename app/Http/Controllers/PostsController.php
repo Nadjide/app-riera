@@ -49,7 +49,6 @@ class PostsController extends Controller
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
-            'cover_image'=>'image|nullable|max:1999',
         ]);
          // test file
          if($request->hasFile('cover_image')){
@@ -120,11 +119,9 @@ class PostsController extends Controller
         $this->validate($request,[
             'title'=>'required',
             'body'=>'required',
-            'image'=>'required',
         ]);
         $post= Post::find($id);
         $post->title = $request->input('title');
-        $post->cover_image = $fileNameToStore;
         $post->body = $request->input('body');
         $post->updated_at = now();
         $post->save();

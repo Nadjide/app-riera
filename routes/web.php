@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EvenementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,9 @@ Route::resource('posts','App\Http\Controllers\PostsController');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/comments', [App\Http\Controllers\CommentsController::class, 'store'])->name('comments.store');
+
+Route::post('/evenements', 'EvenementController@store')->name('evenements.store');
+
+
